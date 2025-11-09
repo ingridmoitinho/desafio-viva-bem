@@ -35,7 +35,7 @@ header .box-header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  background: linear-gradient(to right, #1173d4 0%, #33CC73 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 header .box-header nav {
@@ -65,7 +65,7 @@ header .box-header nav a {
 }
 .box-banner .banner-title h2 {
   font-size: 4rem;
-  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  background: linear-gradient(to right, #1173d4 0%, #33CC73 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -117,6 +117,7 @@ main {
   margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
+  font-family: "Inter", sans-serif;
 }
 
 .routine-exams {
@@ -125,7 +126,7 @@ main {
   font-family: "Inter", sans-serif;
 }
 .routine-exams .title {
-  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  background: linear-gradient(to right, #1173d4 0%, #33CC73 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -168,6 +169,72 @@ main {
 .box-cards .card p {
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.prevention-feminine {
+  background-color: #FDEFEF;
+  padding: 4rem 0;
+}
+
+.title-feminine {
+  background: linear-gradient(to right, rgba(249, 1, 111, 0.5411764706) 54%, rgba(147, 8, 133, 0.6196078431) 62%, rgba(208, 56, 170, 0.7529411765) 75%, #851C87 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.prevention-masculine {
+  background-color: #F8F9FA;
+  padding: 4rem 0;
+}
+
+.title-masculine {
+  background: linear-gradient(to right, #3373D2 0%, #6F95C7 25%, #7BB5F5 50%, #0074EE 75%, #5EA7EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.box-prevention {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.prevention-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 1rem;
+  flex-basis: 280px;
+}
+.prevention-card img {
+  width: 100px;
+  height: 100px;
+}
+.prevention-card h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #04031c;
+}
+.prevention-card ul {
+  text-align: left;
+  margin-top: 1rem;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.prevention-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -302,6 +369,9 @@ footer {
   .routine-exams .box-cards .card p {
     font-size: 0.9rem;
   }
+  .box-prevention {
+    width: 90%;
+  }
   .box-footer {
     flex-direction: column;
     align-items: center;
@@ -373,6 +443,9 @@ footer {
   }
   .routine-exams .box-cards .card {
     width: 250px;
+  }
+  .box-prevention {
+    width: 90%;
   }
   .box-footer {
     gap: 2rem;
