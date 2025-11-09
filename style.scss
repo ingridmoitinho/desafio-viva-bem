@@ -148,19 +148,19 @@ main {
   font-family: $font-primary;
 }
 
+.title {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 // Seção de Exames de Rotina
 .routine-exams {
   background-color: #f8f9fa;
   padding: 4rem 0;
   font-family: $font-primary;
-
-  .title {
-    background: $gradient-primary;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
 
   .subtitle {
     font-size: 1.2rem;
@@ -274,6 +274,93 @@ main {
       margin-bottom: 0.5rem;
       font-size: 0.9rem;
     }
+  }
+}
+
+// Seção Alertas Importantes
+.important-alerts {
+  margin-top: 2rem;
+  padding: 2rem 0; 
+  font-family: $font-secondary; 
+}
+
+.box-alerts {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  column-gap: 5rem;   
+  padding: 0 1rem; 
+  width: 60%;
+  margin: 0 auto; 
+  margin-top: 4rem; 
+}
+
+.alert-card {
+  background-color: $color-light;
+  border-radius: $radius-default;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  flex-basis: 450px; 
+  margin-bottom: 2rem;
+
+  .alert-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+.alert-pink { 
+  background-color: #F9D5E5;
+  h3 {
+    color: #AD346A;
+  }
+
+  p {
+    color: #AD346A;
+  }
+}
+
+.alert-blue {  
+  background-color: #CFE2F3;
+  h3 {
+    color: #2769A3;
+  }
+
+  p {
+    color: #2769A3;
+  }
+}
+
+.alert-green { 
+  background-color: #D4EDDA;
+  h3 {
+    color: #244A2D;
+  }
+
+  p {
+    color: #244A2D;
+  }
+}
+
+.alert-yellow { 
+  background-color: #FFE9C2;
+  h3 {
+    color: #976C00;
+  }
+  p {
+    color: #976C00;
   }
 }
 
@@ -407,10 +494,11 @@ footer {
     }
   }
 
-  .routine-exams {
-    #title {
+  #title {
       font-size: 1.7rem;
     }
+
+  .routine-exams {    
 
     .subtitle {
       width: 90%;
@@ -441,6 +529,20 @@ footer {
     width: 90%;
   }
 
+ .box-alerts {   
+    width: 90%;   
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 0.2rem; 
+  }
+
+  .alert-card {   
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
   .box-footer {
     flex-direction: column;
     align-items: center;
@@ -452,7 +554,8 @@ footer {
       width: 100%;
     }
   }
-}
+  }
+
 
 /* 💻 TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -514,12 +617,11 @@ footer {
     }
   }
 
-
-  .routine-exams {
-    #title {
+  #title {
       font-size: 2.5rem;
-    }
+  }
 
+  .routine-exams { 
     .subtitle {
       width: 70%;
       font-size: 1.1rem;

@@ -120,17 +120,18 @@ main {
   font-family: "Inter", sans-serif;
 }
 
-.routine-exams {
-  background-color: #f8f9fa;
-  padding: 4rem 0;
-  font-family: "Inter", sans-serif;
-}
-.routine-exams .title {
+.title {
   background: linear-gradient(to right, #1173d4 0%, #33CC73 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+.routine-exams {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+  font-family: "Inter", sans-serif;
 }
 .routine-exams .subtitle {
   font-size: 1.2rem;
@@ -235,6 +236,87 @@ main {
 .prevention-card ul li {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+}
+
+.important-alerts {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.box-alerts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  padding: 0 1rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.alert-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-basis: 450px;
+  margin-bottom: 2rem;
+}
+.alert-card .alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.alert-card .alert-header img {
+  width: 30px;
+  height: 30px;
+}
+.alert-card p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.alert-pink {
+  background-color: #F9D5E5;
+}
+.alert-pink h3 {
+  color: #AD346A;
+}
+.alert-pink p {
+  color: #AD346A;
+}
+
+.alert-blue {
+  background-color: #CFE2F3;
+}
+.alert-blue h3 {
+  color: #2769A3;
+}
+.alert-blue p {
+  color: #2769A3;
+}
+
+.alert-green {
+  background-color: #D4EDDA;
+}
+.alert-green h3 {
+  color: #244A2D;
+}
+.alert-green p {
+  color: #244A2D;
+}
+
+.alert-yellow {
+  background-color: #FFE9C2;
+}
+.alert-yellow h3 {
+  color: #976C00;
+}
+.alert-yellow p {
+  color: #976C00;
 }
 
 footer {
@@ -347,7 +429,7 @@ footer {
   .box-button .button-secondary {
     width: 40%;
   }
-  .routine-exams #title {
+  #title {
     font-size: 1.7rem;
   }
   .routine-exams .subtitle {
@@ -371,6 +453,19 @@ footer {
   }
   .box-prevention {
     width: 90%;
+  }
+  .box-alerts {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 0.2rem;
+  }
+  .alert-card {
+    flex-basis: 100%;
+    width: 100%;
+    font-size: 0.9rem;
   }
   .box-footer {
     flex-direction: column;
@@ -429,7 +524,7 @@ footer {
   .box-button .button-secondary {
     width: 30%;
   }
-  .routine-exams #title {
+  #title {
     font-size: 2.5rem;
   }
   .routine-exams .subtitle {
