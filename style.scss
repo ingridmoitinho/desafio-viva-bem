@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+
+:root {
+  /* Fontes */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+
+  /* Cores principais */
+  --color-primary: #1173D4;
+  --color-secondary: #52b095;
+  --color-tertiary: #4247a2;
+  --color-dark: #04031C;
+  --color-light: #ffffff;
+
+  /* Gradientes */
+  --gradient-primary: linear-gradient(to right, var(--color-tertiary) 0%, var(--color-secondary) 100%);
+  
+
+  /* Tamanhos */
+  --radius-default: 10px;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+// Estilização do Header e Banner
+header {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("./img/bannerHeader.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .box-header {
+    margin-top: 30px;
+    width: 73%;
+    height: 7vh;
+    margin-top: 5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--gradient-primary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    nav {
+      width: 40%;      
+      height: 7vh;
+      display: flex;
+      margin-right: 5rem;
+      align-items: center;
+      justify-content: space-around;
+      
+      a {
+        color: var(--color-light);
+        font-family: var(--font-secondary);
+        font-size: 1.2rem;        
+      }
+    }
+  }
+}
+
+.box-banner {
+  width: 73vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  .banner-title {    
+    height: 60vh;
+    margin-top: 5rem; 
+    font-family: var(--font-primary);  
+    h2 {
+      font-size: 4rem;     
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;      
+      width: 80%;
+    }
+      p {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--color-dark);       
+        width: 60%;
+      }
+    }
+  }
+
+  .box-button {
+    margin-top: 4rem;
+    width: 60%;
+    height: 5vh; 
+    font-weight: 500;  
+   
+    button {
+      margin-right: 20px;
+      padding: 20px 0px;
+      border-radius: var(--radius-default);
+      border: none;
+      font-family: var(--font-primary);    
+      font-size: 1rem;  
+      cursor: pointer;
+    }
+    .button-primary {
+      background: var(--color-primary);
+      color: var(--color-light);
+      width: 50%;
+    }
+    .button-secondary {
+      background: var(--color-light);
+      color: var(--color-primary);
+      border: solid 1px var(--color-primary);
+      width: 30%;
+    }
+  }
+
+  // Responsividade 
+/* 📱 MOBILE */
+  @media (max-width: 600px) {
+  header {
+    height: auto;
+    background-size: cover;
+
+    .box-header {
+      width: 90%;
+      height: auto;     
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 2rem;      
+      img {
+        width: 6rem;
+      }
+      nav {
+        width: 50%;
+        margin-right: 0;
+        justify-content: center;
+        gap: 1.5rem;
+
+        a {
+          font-size: 0.8rem;          
+        }
+      }
+    }
+  }
+
+  .box-banner {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+
+    .banner-title {
+      margin-top: 3rem;
+
+      h2 {
+        font-size: 2.8rem;
+        width: 100%;       
+      }
+
+      p {
+        font-size: 1.7rem;
+        width: 100%;      
+      }
+    }
+  }
+
+  .box-button {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;    
+    align-items: center;
+    gap: 1rem;    
+
+    button {           
+      padding: 20px 0;
+      font-size: 0.8rem;    
+    }
+
+    .button-primary {      
+      width: 60%;     
+    }
+
+    .button-secondary {
+      width: 40%;     
+    }
+  }
+}
+
+/* 💻 TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    height:40vh ;    
+
+    .box-header {
+      width: 80%;           
+      border-radius: 30px;
+      margin-top: 2rem;      
+      img {
+        width: 7rem;
+      }
+      nav {
+        width: 60%;
+        margin-right: 2rem;
+        justify-content: center;
+        gap: 2rem;   
+
+        a {
+          font-size: 1rem;          
+        }
+      }
+    }
+  }
+
+  .box-banner {
+    width: 80vw;    
+
+    .banner-title {
+      h2 { 
+        margin-top: -3rem;
+        font-size: 2.5rem; 
+        width: 70%;             
+      }
+
+      p {
+        font-size: 1.2rem;  
+        margin-bottom: -2rem;          
+      }
+    }
+  }
+
+  .box-button {
+    width: 60%;   
+
+    button {           
+      font-size: 0.9rem;    
+    }
+
+    .button-primary {      
+      width: 45%;     
+    }
+
+    .button-secondary {
+      width: 30%;     
+    }
+  }
+}
