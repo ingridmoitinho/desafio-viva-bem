@@ -77,7 +77,7 @@ header .box-header nav a {
   margin-top: 1.5rem;
   font-size: 2rem;
   font-weight: 400;
-  color: #04031C;
+  color: #04031c;
   width: 60%;
 }
 
@@ -97,19 +97,77 @@ header .box-header nav a {
   cursor: pointer;
 }
 .box-button .button-primary {
-  background: #1173D4;
+  background: #1173d4;
   color: #ffffff;
   width: 50%;
 }
 .box-button .button-secondary {
   background: #ffffff;
-  color: #1173D4;
-  border: solid 1px #1173D4;
+  color: #1173d4;
+  border: solid 1px #1173d4;
   width: 30%;
 }
 
 main {
   flex-grow: 1;
+}
+
+#title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.routine-exams {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+  font-family: "Inter", sans-serif;
+}
+.routine-exams .title {
+  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.routine-exams .subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto 4rem auto;
+  color: #04031c;
+}
+
+.box-cards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.box-cards .card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 1rem;
+  flex-basis: 300px;
+}
+.box-cards .card img {
+  width: 50px;
+  height: 50px;
+}
+.box-cards .card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #04031c;
+}
+.box-cards .card p {
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 footer {
@@ -126,7 +184,7 @@ footer {
   gap: 10rem;
   margin-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: solid 1px #9FABBC;
+  border-bottom: solid 1px #9fabbc;
   flex-wrap: wrap;
 }
 .box-footer div {
@@ -222,6 +280,28 @@ footer {
   .box-button .button-secondary {
     width: 40%;
   }
+  .routine-exams #title {
+    font-size: 1.7rem;
+  }
+  .routine-exams .subtitle {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .routine-exams .box-cards {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .routine-exams .box-cards .card {
+    width: 80%;
+    flex-basis: auto;
+  }
+  .routine-exams .box-cards .card h3 {
+    font-size: 1rem;
+  }
+  .routine-exams .box-cards .card p {
+    font-size: 0.9rem;
+  }
   .box-footer {
     flex-direction: column;
     align-items: center;
@@ -278,6 +358,21 @@ footer {
   }
   .box-button .button-secondary {
     width: 30%;
+  }
+  .routine-exams #title {
+    font-size: 2.5rem;
+  }
+  .routine-exams .subtitle {
+    width: 70%;
+    font-size: 1.1rem;
+  }
+  .routine-exams .box-cards {
+    gap: 3rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .routine-exams .box-cards .card {
+    width: 250px;
   }
   .box-footer {
     gap: 2rem;

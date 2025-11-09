@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Fontes */
 $font-primary: "Inter", sans-serif;
@@ -6,14 +6,16 @@ $font-secondary: "Roboto", sans-serif;
 $font-tertiary: "Poppins", sans-serif;
 
 /* Cores principais */
-$color-primary: #1173D4;
+$color-primary: #1173d4;
 $color-secondary: #52b095;
 $color-tertiary: #4247a2;
-$color-dark: #04031C;
+$color-dark: #04031c;
 $color-light: #ffffff;
 
 /* Gradientes */
-$gradient-primary: linear-gradient(to right, $color-tertiary 0%, $color-secondary 100%);
+$gradient-primary: linear-gradient(to right,
+    $color-tertiary 0%,
+    $color-secondary 100%);
 
 /* Tamanhos */
 $radius-default: 10px;
@@ -135,11 +137,74 @@ header {
 // Conteúdo principal
 main {
   flex-grow: 1;
-
 }
 
+#title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
 
-// Footer 
+// Seção de Exames de Rotina
+.routine-exams {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+  font-family: $font-primary;
+
+  .title {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 4rem auto;
+    color: $color-dark;
+  }
+}
+
+.box-cards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+
+  .card {
+    background-color: $color-light;
+    padding: 2rem;
+    border-radius: $radius-default;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 1rem;
+    flex-basis: 300px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: $color-dark;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// Footer
 footer {
   background-color: #313461;
   color: $color-light;
@@ -154,7 +219,7 @@ footer {
   gap: 10rem;
   margin-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: solid 1px #9FABBC;
+  border-bottom: solid 1px #9fabbc;
   flex-wrap: wrap;
 
   div {
@@ -194,7 +259,7 @@ footer {
   text-align: center;
 }
 
-// Responsividade 
+// Responsividade
 /* 📱 MOBILE */
 @media (max-width: 600px) {
   header {
@@ -269,6 +334,36 @@ footer {
     }
   }
 
+  .routine-exams {
+    #title {
+      font-size: 1.7rem;
+    }
+
+    .subtitle {
+      width: 90%;
+      font-size: 1rem;
+    }
+
+    .box-cards {
+      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+
+      .card {
+        width: 80%;
+        flex-basis: auto;
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
   .box-footer {
     flex-direction: column;
     align-items: center;
@@ -339,6 +434,28 @@ footer {
 
     .button-secondary {
       width: 30%;
+    }
+  }
+
+
+  .routine-exams {
+    #title {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      width: 70%;
+      font-size: 1.1rem;
+    }
+
+    .box-cards {
+      gap: 3rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .card {
+        width: 250px;
+      }
     }
   }
 
